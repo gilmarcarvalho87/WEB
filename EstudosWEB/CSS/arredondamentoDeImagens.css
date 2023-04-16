@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(134, 165, 192);
+}
+
+
+.caixa{
+    border: solid red 2px;
+    width: 400px;
+    height: auto; 
+    padding: 15px;
+    background: linear-gradient(to right, rgb(242, 63, 63),rgb(238, 150, 128));
+    border-radius: 15px;
+}

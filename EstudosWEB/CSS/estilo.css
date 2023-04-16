@@ -1,0 +1,45 @@
+  /*Estilo para barra de navegação*/ 
+*{
+	color: black;
+;
+}
+
+a{	
+	color:blueviolet;
+	text-decoration: none;	
+}
+ul{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+
+}
+ul a{
+	/*border: 2px solid red;	*/
+	width: 200px;
+	height: 40px;
+	display: block;
+	color: #000;
+	text-decoration: none;
+	text-indent: 40px;
+	line-height: 40px;
+	background: #f7b600 URL(img/menu.png) no-repeat left bottom ;
+
+}
+a:hover{
+	background-position: right bottom;
+	background-color: #f99200;
+	color: #fff;
+
+}
+#index #navegacao .index a, 
+#sobre #navegacao .sobre a,
+#servicos #navegacao .servicos a,
+#noticias #navegacao .noticias a,
+#contato #navegacao .contato a{
+	background-position: right bottom;
+	background-color: #f99200;
+	color: #fff;
+}
+
+
