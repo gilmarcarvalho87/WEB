@@ -1,0 +1,17 @@
+body{
+    background-color: #ccc;
+}
+.foto{
+    background: url(../IMG/camera.png) no-repeat;
+    width: 300px;
+    height: 300px;
+    margin: 50% 50% ;
+    font-size: 25px;
+    color: azure;
+    text-align: center;
+    border-radius: 50%;
+   
+
+
+
+}
