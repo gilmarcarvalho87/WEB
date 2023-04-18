@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <style>
+        body{
+          
+           width: 100%;
+
+        }
+        @keyframes animacao-caixa{
+            from{
+                position: absolute;
+                background: #000; 
+                border-radius: 45%;  
+                bottom: 0;
+                left: 900px;
+                
+               
+
+
+            } to{
+                position: absolute;
+                background: #000;               
+                border-radius:100%;
+                bottom: 540px;
+                left: 900px;
+
+                
+            }
+        }
+        .quadrado{
+            position: absolute;
+            background-color: aliceblue;
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+            border: 2px solid black;
+            bottom: 50px;
+            left: 50px;
+        }
+        .caixa{
+            width: 300px;
+            height: 300px;
+            
+           
+            animation-duration: 1s;
+            animation-name: animacao-caixa;           
+            animation-direction: alternate-reverse;
+            animation-iteration-count: 100;            
+        }
+        .caixa2{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            bottom: 50px;
+            left: 50px;
+            border-radius: 100%;
+            background-color: rgb(4, 6, 8);
+        } 
+        h1{
+            position: absolute;
+            left: 100PX;
+            top: 300px;
+            font-size: 70px;
+        }
+        img{
+            position: absolute;
+            left: 20PX;
+            top: 200px;
+        }
+
+
+
+
+
+
+    </style>
+    <title>Animacoes</title>
+</head>
+<body>
+        <H1>BORA DAR UMA CAGADINHA!!!</H1>
+    <img src="../IMG/gato-cagando.png" alt="">
+    <div class="caixa">       
+   <div class="quadrado">
+    <div class="caixa2"></div>
+   </div>
+   
+    </div>
+
+
+
+
+
+</body>
+</html>

@@ -1,7 +1,8 @@
 body{
     background-color: #ccc;
 }
-.foto{
+.caixa{
+    
     background: url(../IMG/camera.png) no-repeat;
     width: 300px;
     height: 300px;
@@ -9,9 +10,37 @@ body{
     font-size: 25px;
     color: azure;
     text-align: center;
-    border-radius: 50%;
+    border-radius: 30px;
+}
+.foto{
+    background-color: rgba(57, 92, 123);
+    position: relative;
+    left:-90px;
+    top: 255px;
+    border-radius: 10px;
+    opacity: 0.5;
+
+}
+.caixa2{
+
+    width: 300px;
+    height: 300px;
+    margin-top: 30px;
+
+    background: linear-gradient(to bottom,rgb(255, 34, 0) ,blue);
+}
+.caixa3{
+
+    width: 300px;
+    height: 300px;
+    margin-top: 30px;
    
+    background: linear-gradient(135deg,rgb(255, 34, 0) ,blue);
+}
+.caixa4{
 
-
-
+    width: 300px;
+    height: 300px;
+    margin-top: 30px;
+    background: radial-gradient(rgb(246, 255, 0),green);
 }
