@@ -11,66 +11,77 @@
            width: 100%;
 
         }
-        @keyframes animacao-caixa{
+        @keyframes animacao-coco{
             from{
                 position: absolute;
-                background: #000; 
-                border-radius: 45%;  
-                bottom: 0;
-                left: 900px;
+                background: #0c0c0c; 
+                border-radius:45% rgb(244, 8, 8) 2px;
+                bottom: 1260px;
+                left: 1010px;
                 
                
 
 
-            } to{
+            } to{ 
                 position: absolute;
-                background: #000;               
-                border-radius:100%;
-                bottom: 540px;
-                left: 900px;
+                background: #1a0f0f;               
+                border-radius:100% rgb(244, 8, 8) 2px;             
+                bottom: 1200px;
+                left: 1020px;
 
                 
             }
         }
-        .quadrado{
+       
+        .coco{
             position: absolute;
-            background-color: aliceblue;
-            width: 200px;
-            height: 200px;
-            border-radius: 15px;
-            border: 2px solid black;
-            bottom: 50px;
-            left: 50px;
-        }
-        .caixa{
-            width: 300px;
-            height: 300px;
-            
+            width: 25px;
+            height: 25px;
            
-            animation-duration: 1s;
-            animation-name: animacao-caixa;           
-            animation-direction: alternate-reverse;
-            animation-iteration-count: 100;            
-        }
-        .caixa2{
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            bottom: 50px;
-            left: 50px;
             border-radius: 100%;
             background-color: rgb(4, 6, 8);
+            animation-name: animacao-coco;
+            animation-duration: 0.3s;
+            animation-delay: 1s;
+            animation-iteration-count: 1000;
         } 
+        .coco2{
+            position: absolute;
+            width: 25px;
+            height: 25px;
+           
+            border-radius: 100%;
+            background-color: rgb(9, 23, 0);
+            animation-name: animacao-coco;
+            animation-duration: 0.4s;           
+            animation-iteration-count: 1000;
+        } 
+        h3{
+            position: absolute;
+            left: 100PX;
+            top: 150px;
+            font-size: 50px;
+            color: blueviolet;
+        }
         h1{
             position: absolute;
             left: 100PX;
             top: 300px;
             font-size: 70px;
         }
-        img{
+        .foto-grama{
+            position: absolute;
+            left: 0PX;
+            top: 1390px;
+            height: 250px;
+            width: 50%;
+        }
+
+        
+        .foto-gato{
             position: absolute;
             left: 20PX;
-            top: 200px;
+            top: 600px;
         }
 
 
@@ -82,15 +93,14 @@
     <title>Animacoes</title>
 </head>
 <body>
-        <H1>BORA DAR UMA CAGADINHA!!!</H1>
-    <img src="../IMG/gato-cagando.png" alt="">
-    <div class="caixa">       
-   <div class="quadrado">
-    <div class="caixa2"></div>
-   </div>
-   
-    </div>
+            <H3>USING HTML CSS</H3>
 
+        <H1>BORA DAR UMA CAGADINHA!!!</H1>
+    <img class="foto-gato"src="../IMG/gato-cagando.png" alt="">
+    <img class="foto-grama" src="../IMG/grama.png" alt="">
+  
+    <div class="coco"></div>
+    <div class="coco2"></div>
 
 
 

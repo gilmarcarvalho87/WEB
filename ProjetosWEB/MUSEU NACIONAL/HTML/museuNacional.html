@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/estiloMuseu.css">
+
+    <!--Shim
+    [if lt IE 9]>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>    
+   
+    <!--normalize-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    
+    <title>Museu Nacional - Home</title>
+</head>
+<body>
+
+    <div id="container">
+        <header><!--inicio header-->
+            <div id="logo">
+                <h1><a href="#">Museu Nacional</a></h1>
+            </div>
+       </header><!--fim header-->
+       <nav><!--inicio nav-->
+            <div id="navegacao">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Exposições</a></li>
+                    <li><a href="#">Pesquisa</a></li>
+                    <li><a href="#">Acervos</a></li>
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="#">Fotos</a></li>
+                    <li><a href="#">Contato</a></li>               
+                </ul>
+            </div>            
+       </nav><!--fim nav-->
+       
+       <div id="principal">
+            <section id="capa">
+                <img src="../IMG/museu.png" alt="">
+            </section>
+            <aside id="lateral">
+                <section id="depoimento">
+                    <img src="../IMG/depoimento.png" alt="">
+                </section>
+                <section id="visita">
+                    <div>
+                        <h4>Faça uma visita</h4>
+                        <fieldset>
+                            <legend><strong>Selecione uma data</strong></legend>
+                            <form action="">
+                                <label for="txtData">Data</label><br>
+                                <input type="date" name="txtData" value="dd/mm/aaaa" autofocus ><br><br>
+                                <label for="txtQtdPessoas">Quantidade Pessoas</label><br>
+                                <input type="number" name="txtQtdPessoas" value="1" min="1" max="50"><br><br>
+
+                                <input type="submit" id="enviar" value="Verificar disponibilidade">
+                            </form>
+                        </fieldset>
+                       
+                    </div>
+                </section>
+                <section id="galeria">                
+                   <h4>Galeria de fotos</h4>
+
+                   <div class="caixa-galeria"> 
+                   <a href="" class="fundo-foto">
+                        <img src="../IMG/imagem1.jpg" width="93" height="93"    alt="imagem1">
+                    </a>
+                    <a href=""class="fundo-foto">
+                        <img src="../IMG/imagem2.jpg"  width="93" height="93" alt="imagem2">
+                    </a>
+                    <a href=""class="fundo-foto">
+                        <img src="../IMG/imagem3.jpg"  width="93" height="93" alt="imagem3">
+                    </a>
+                    <a href=""class="fundo-foto">
+                        <img src="../IMG/imagem4.jpg" width="93" height="93" alt="imagem4">
+                    </a>
+                    </div>
+
+                </section>
+            </aside>
+
+
+       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+ <footer><!--inicio footer-->
+      
+    </footer><!--fim footer-->
+    
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+
+section{
+    background-color: rgb(224, 152, 79);  
+    width: 920px;
+    padding: 10px;
+    margin: 15% auto;
+    
+   
+}
+.bolinha{
+    width: 40px;
+    height: 40px;
+    border: 0.5px solid rgb(6, 93, 215);
+    border-radius: 35%;
+    background-color: rgb(37, 21, 179);  
+    transition: all;
+    display: inline-block;
+ 
+   
+    
+   
+
+}
+.bolinha:hover{
+    background-color: rgb(60, 228, 23);
+  
+
+}
+
