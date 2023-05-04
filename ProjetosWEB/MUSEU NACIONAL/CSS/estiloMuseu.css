@@ -20,7 +20,9 @@ a:hover{
 #container{
     width: 1080px;
     margin: 0 auto; 
-
+    height: 1650px;
+   
+  
 }
 
 /*inicio header*/
@@ -63,24 +65,74 @@ nav li a:hover{
 }
  /*fim header*/
 
+
+
+
+
   /*inicio do conteudo principal*/
    
+#principal{
+    height: 1000px;
+    width: 710px;
+    text-transform: uppercase;  
+}
 
 
 
+#postagens{ 
+    color: #040504;  
+    box-sizing: border-box;   
+   
+    position: relative;
+    top: -70px;
 
-#conteudo{
-    background: #ebe7dd;
-    display: inline-flex;
-    width: 710px;   
-    margin-right: 15px;
+
+   
+}
+#video{
+    display: inline-block; 
+    margin: 14px;
+    
+   
+}
+#mapa{  
+    display: inline-block;
+ 
+  
+}
+#exposicao{    
+    display: inline-block; 
+
+    width: 300px; 
+    margin: 14px;
+    width: 315px;
+    height:170px;
+
 
 }
+#duzanos{  
+   
+    display: inline-block; 
+    height: 170px;  
+    width: 350px; 
+    position: relative;
+    top: -16px;
+    left: 0;
+}
+.leia-mais{
+   position: relative;
+   top: 25px;
+}
+
+/*Lateral*/
 #lateral{
     background-color: #ebe7dd;
-    float: right;
     width: 350px;  
-    height: 1000px;
+    height: 800px;
+
+    position:relative;
+    left: 730px;
+    top: -765px;
 }
 #capa img{
     float: left;  
@@ -107,6 +159,9 @@ section#visita{
     color: #227115;
     text-transform: uppercase;
     padding-bottom: 3px;
+    margin-left: 10px;
+    font-size: 1.2em;
+    
 
 }
 #visita fieldset{
@@ -121,48 +176,70 @@ input#enviar{
     border: 3px solid #227115;
 
 }
-section#galeria{
-    background-color:  #cdc8b1;
+
+/*galeria*/
+section#galeria {  
+    background-color: #cdc8b1;     
+    height: 380PX;
+    color: #480303; 
+    padding: 10px;
+    margin-top: 15px;
+}
+section#galeria h4{
+    margin-left: 10px;
+    font-size: 1.3em;
+}
+section#galeria .subcaixa{
+   
     width: 100%;
-    height: 400px; 
-  
+    height: 310px;   
 }
-section#galeria h3{
-    color: #227115;
+section#galeria a{
+    background: url(..//IMG/fundo-foto.png)no-repeat;    
+    float: left;
+    margin: 10px 10px;
+    position: relative;
+    top: 0;
+    left: 10px;   
+    padding: 20px;
 }
-section#galeria .caixa-galeria{
-    background-color: #480303;
-    color: #fff;
-    width: 95%;
-    height: 80%;
-   
-    margin: 0 auto;
-}
-section#galeria .fundo-foto{  
-    display: block;
-    background:url(../IMG/fundo-foto.png)no-repeat;
-    border:1px solid red;
-    margin-bottom: 15px;
-
+section#galeria img{ 
+   float: left;
+   left: -3px;
+   top: 0px;
 }
 
-
-
-
-   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   /*fim do conteudo principal*/
+
+  /*footer*/
+ #footer{
+    background-color: #480303;
+    width: 100%;
+    height: 200px;
+    color: #f4f2ec ;
+   
+  }
+  #rodape{
+    background-color: #af670a;
+    width: 710px;
+    height: 100px;
+    margin: 0px auto;
+   
+
+  }
+  #footer ul{
+    background-color: #227115;
+    width: 600px; 
+    height: 50px;   
+    list-style: none; 
+}
+
+#footer a{
+    color: #2ae911;
+    font-size: 15px;
+    display: inline-block;
+    float: left;
+    padding: 10px;
+   
+   
+}   
