@@ -41,14 +41,70 @@
                 
                 <option value="">Alagoas</option>
                 
-                <option value="">Amapá</option>
+                <option vaalue="">Amapá</option>
             </select>
         </div>
         <div class="form-group">
             <label for="">Mensagem</label>
-            <textarea class="form-control" id="mensagem" rows="3" ></textarea>
+            <textarea class="form-control" id="mensagem" rows="3"maxlength="550"></textarea>
         
         </div>
+        <div class="form-group">
+            <input class="from-control-file"type="file" ></input>
+        </div>
+
+       <br><br>
+      
+       <div class="form-group">           
+        <input class="" type="range" id="range"></input>
+        </div>
+        <div class="form-group">           
+            <label for="range" >Satisfação</label>
+            <input class="custom-range" type="range" id="range" min="1" max="5"></input>
+        </div>
+        <div class="form-inline ">
+            <label class="mr-2" for="usuario">Usuário</label>
+            <input class="mr-3  form-control bg-light" id="usuario" type="text" min="5" max="50"> 
+            <label class="mr-2" for="senha">Senha</label>      
+            <input class="mr-2  form-control bg-light is-valid" id="senha" type="password" id="password" placeholder="*****">
+            <input class="btn btn-primary"type="button" value="salvar">
+        </div>
+<BR></BR>
+        <div class="form-group">
+            <label class="mr-2" for="usuario">Usuário</label>
+            <input class="mr-3  form-control bg-light is-invalid" id="usuario" type="text" min="5" max="50"> 
+            <div class="invalid-feedback mb-4">
+                Inválido !!!  
+            </div>
+        </div>
+        <div class="form-group">          
+            <label class="mr-2" for="senha">Senha</label>      
+            <input class="  form-control bg-light is-valid" id="senha" type="password" id="password" placeholder="*****">
+            <div class="valid-feedback mb-4">
+                válido !!!  
+            </div>
+            <input class="btn btn-primary "type="button" value="salvar">
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </form>
 
 
