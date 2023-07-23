@@ -1,0 +1,302 @@
+/*CLONE SPOTIFY PARA ESTUDOS*/
+
+
+/*Medias queries*/
+@media (max-width: 575.98px) { 
+    h1{color: rgb(49, 16, 236);
+        font-size:3.5em;  
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        margin-bottom: 50px;
+    }
+    #home .musica-todos-conteudo a{
+        padding: 13px;
+        margin: 5px;
+    }
+    .texto-servicos{
+        padding: 0 10px;
+    }
+    #rodape .rodape h4{ 
+        color:#08ee32;
+        margin-left: 40px;
+    }
+    #rodape a{
+        background-color: #5e0d9d;
+        text-align: start;
+        border-radius: 50%;
+     }    
+    footer  .lista{   
+      text-align: center;
+    }
+    #rodape .icons{
+        margin: 40px 0;
+    }
+  
+  
+}
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    h1{color: rgb(49, 16, 236);
+        font-size:4.5em;  
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        margin-bottom: 50px;
+    }
+    .navbar-toggler{
+        
+    }
+    #home .musica-todos-conteudo a{
+        padding: 13px;
+        margin: 5px;
+    }
+    #rodape .rodape h4{ 
+        color:#08ee32;
+        margin-left: 40px;
+    }
+    #rodape a{
+        background-color: #5e0d9d;
+        text-align: start;
+        border-radius: 50%;
+     }    
+    footer  .lista{   
+      text-align: center;
+    }
+    #rodape .icons{
+        margin: 40px 0;
+    }
+   
+}
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    h1{color: rgb(49, 16, 236);
+        font-size:4.0em;  
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        margin-bottom: 50px;
+    }
+    #home .musica-todos-conteudo a{
+        padding: 13px;
+        margin: 5px;
+    }   
+    .celular-duplo{       
+        position: relative;
+        top: 200px;
+        left: 0;
+        padding: 3  0px;
+    } 
+    #rodape h4{
+      position: relative;
+      top: auto;
+      left: 30px;
+      font-size: medium;    
+      font-weight:600;  
+    }    
+    #rodape a{
+       background-color: #5e0d9d;
+       border-radius: 50%;
+    }    
+    .icons{
+        font-size: 15px;           
+        display: flex;        
+        width: 100%;
+        height: 120px;           
+      
+    }
+    .icones{
+        align-self: flex-start;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    h1{color: rgb(49, 16, 236);
+        font-size:4.5em;  
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        margin-bottom: 50px;
+    }
+    #home .musica-todos-conteudo a{
+        padding: 13px;
+        margin: 5px;
+    }
+}
+@media (min-width: 1200px) { 
+    h1{color: rgb(49, 16, 236);
+        font-size:5em;  
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        margin-bottom: 50px;
+    }
+    #home .musica-todos-conteudo a{
+        padding: 13px;
+        margin: 5px;
+    }
+
+}
+
+
+/*Header - barra de navegacao principal*/
+#barra-navegacao{
+    background-color: rgba(0,0,0,0.8);
+}
+.navbar-nav .nav-link{
+    color: rgb(255, 240, 254);
+}
+.navbar-nav .nav-link:hover{
+    color: #7778d9;
+}
+#barra-navegacao .navbar-toggler{
+    color: #9e26f9;
+}
+.divisor{
+    border: 1px solid white;
+    height: 1.5em;
+    margin: 8px 10px;
+}
+
+
+
+/*Header - caixa musica para todos*/
+#home .musica-todos{
+    font-family:Arial, Helvetica, sans-serif;
+    color: #fff;
+  
+    margin: 250px auto;
+    padding: 25px;
+   
+}
+.musica-todos-conteudo{
+
+    text-align: center;
+}
+.btn-custom{
+   
+    border-radius: 500px;
+    web-border-radius: 500px;
+    moz-border-radius: 500px;   
+    transition: background 0.5s,color 0.5s;
+    padding: 10px 15px;
+}
+.btn-roxo{
+    background-color: #6505a9;   
+    color: #eeeef3;
+    border: 1px solid #5e0d9d;
+}
+.btn-roxo:hover{
+    background-color: #9e26f9;
+    color: #fff;
+    border: 1px solid rgb(237, 115, 208);
+}
+
+.btn-branco{
+    border: 1px solid white;
+    color: #fff;
+}
+.btn-branco:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+
+
+/*Main - conteudo */
+html, body, #home{
+    height: 100%;
+    overflow-x: hidden;
+
+}
+body{    
+    background: url(../imagens/capa.png),
+                url(../imagens/ruido.png),
+                linear-gradient(45deg,#ff4169,#7c26f8);
+
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.container{
+    min-width: 300px;
+}
+
+
+/*Main - conteudo-Serviços*/
+.caixa{       
+    padding-top:20px;
+    padding-bottom:20px;    
+}
+.caixa-fotos{
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+h2{
+    font-weight: 700;
+    font-size: 3em;
+    letter-spacing: -0.04em;
+}
+h3{
+    font-weight: 700;
+    font-size: 2em;
+    letter-spacing: -0.04em;
+}
+#servicos h2,h3{
+    color: #6505a9;    
+}
+#recursos h2{
+    color: #6505a9;   
+    font-size: 3em;
+}
+#recursos h3{
+    color: #9bf0e1;   
+}
+.texto-recursos p{
+    color: #fff;
+}
+.rotacionar{
+   
+    padding-left: 80px;
+    margin-top: 30px;
+    ms-transform: rotate(30deg);
+    webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+
+}
+/*Rodape*/
+footer{
+  position: relative;
+  padding: 20px 0;
+  background-color: #000;
+  color: #fff;
+  
+}
+footer a{
+       color: #fff;
+       background-color: #5e0d9d;
+       text-align: start;
+       border-radius: 50%;
+    
+}
+footer a:hover{
+    color: #9bf0e1;  
+}
+footer h4{       
+    color: #08ee32;    
+    text-align: center;  
+    text-transform: uppercase;  
+    font-size:1.2em;
+}
+.lista{
+    list-style: none;  
+    text-transform: uppercase;
+
+}
+.itens-lista a{
+    text-decoration: none;  
+   
+}
+
+.icones{
+    background-color: #42106c;   
+    border-radius: 100%;   
+    font-size: 1.8em;
+    padding: 10px;
+    margin-left: 10px;
+}
+.copy{
+    color: #9bf0e1;
+}
+
+

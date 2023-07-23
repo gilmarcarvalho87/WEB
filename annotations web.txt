@@ -1,0 +1,65 @@
+CLASSES				DEFINIÇÃO
+
+
+.container-fluid 		deixa o container com largura quase que total(usado mais em sistemas)
+.order-1			os numeros definirão a sequencia. geralmente começa em 1 ... 
+.col-xs				tamanhos responsivos para telas abaixo de 576px	
+.col-sm				tamanhos responsivos para telas maiores de 576px	
+.col-md				tamanhos responsivos para telas maiores de 768px	
+.col-lg				tamanhos responsivos para telas maiores de 992px	
+.col-xl				tamanhos responsivos para telas maiores de 1200px	
+.col-xxl			tamanhos responsivos para telas maiores de 1400px	
+.offset-	de 1...		Em  conjunto fará com que mova a direita o item. Ex: col-12 offset-md-6 , criou-se o grid de 12 moveu a direita 6 no caso centralizando o item.
+.rounded			deixa o item arredondado
+.no-gutters 			remove o espaçamento do texto 	
+
+.ml-auto 			cria margem automatica a esquerda
+.mr-auto			cria margem automatica a direita, junto com o item acima geralmente  faz com que fique centralizado
+.mt-auto			cria margem automatica superior afastando o item do topo
+.mb-auto			cria margem automatica inferior afastando o item da base
+
+.d-flex				flexbox, com ele, faz que atomaticamente seja flex-nowrap, que nao quebre a linha, aparecendo a barra inferior de rolagem
+.d-none
+.d-block
+
+.flex-wrap			faz com que quando nao ha espaco para mostrar todos os grids quebre para a proxima linha automatico
+.flex-column			faz com que fique os itens em linhas
+
+.navbar-toggle			ao atribuirmos esta classe a um botao,
+
+
+propriedades CSS
+
+transform: rotate(30deg);  	Faz a rotacao do item, no caso, seria uma imagem em 30 graus sentido horario, abaixo tambem os prefixos nos seus respectivos formatos.
+ms-transform: rotate(30deg);
+webkit-transform: rotate(30deg);
+
+overflow:hidden;		Com a propriedade sendo setada em "hidden" fará com que as duas barras sejam escondidas,deixando a pagina congelada na imagem primaria.
+overflow-x: hidden;		Com a propriedade sendo setada em "hidden" fará com que seja escondida a barra de rolagem horizontal. lembrando por padrao é "visible".
+overflow-y: hidden; 		Com a propriedade sendo setada em "hidden" fará com que seja escondida a barra de rolagem vertical. lembrando por padrao é "visible".
+
+
+
+.carousel slide   		classe que faz o carrossel,   
+  .carousel-inner 		Classe sub que faz parte do carrossel
+    .carousel-item active	Classe sub que faz parte do carrossel	
+				propriedades no carrossel
+.carousel-control-prev-icon	data-slide="prev"
+.carousel-control-next-icon	data-slide="next"
+				data-ride="carousel"
+				data-target="#nomeDaDivSerChamada"
+				data-slide-to="0"
+.img-fluid			Deixa a imagem com um tamanho adequado
+.carousel-caption		
+
+
+
+JAVA SCRIPT
+
+-adicionar scripts podem sem por interno com as tags <script>conteudo do script</script>
+ou por inclusao de script externo com o atributo src ex:  <script src="meu_script.js"></script>
+
+-Diferenca em inserir o script dentro do body ou no head é, que o head será carregado antes do body, em consequencia o script tambem.
+
+
+
