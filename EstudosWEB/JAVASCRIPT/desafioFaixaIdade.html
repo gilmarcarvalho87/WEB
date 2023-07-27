@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Desafio faixa de idade</title>
+
+        <script>    
+
+        var idade=prompt("Digite sua idade: ");
+
+        idade= (idade >0 && idade <= 120)? idade : document.write("<h1>Idade Invalida");    
+        
+        if(idade >0 && idade <=15){
+            document.write(" <h2>Criança,</h2> <b>Esta dentro da primeira faixa de 1 a 15 anos. ");
+        }else if(idade <=30){
+            document.write(" <h2>Jovem, </h2> <b> Esta dentro da segunda faixa de 16 a 30 anos. ");
+        }else if(idade <=60){
+            document.write(" <h2>Adulto, </h2> <b> Esta dentro da terceira faixa de 30 a 60 anos. ");
+        }
+        else if(idade >60){
+            document.write(" <h2>Idoso, </h2> <b> Esta dentro da quarta faixa acima de 60 anos. ");
+        }
+ 
+              
+
+        </script>
+       
+    </head>
+
+    <body>
+    
+    </body>
+
+</html>

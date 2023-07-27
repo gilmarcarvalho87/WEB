@@ -1,4 +1,4 @@
-CLASSES				DEFINIÇÃO
+ n  CLASSES				DEFINIÇÃO
 
 
 .container-fluid 		deixa o container com largura quase que total(usado mais em sistemas)
@@ -46,8 +46,7 @@ overflow-y: hidden; 		Com a propriedade sendo setada em "hidden" fará com que s
 				propriedades no carrossel
 .carousel-control-prev-icon	data-slide="prev"
 .carousel-control-next-icon	data-slide="next"
-				data-ride="carousel"
-				data-target="#nomeDaDivSerChamada"
+				data-ride="carousel" 
 				data-slide-to="0"
 .img-fluid			Deixa a imagem com um tamanho adequado
 .carousel-caption		
