@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <title>Funcoes strings</title>
+
+        <script>
+            var nome= "gilmar JS       -";
+
+
+            document.writeln("<h2>"+nome.length +"<br>");         /*pegará o numero de caracters*/
+
+            document.writeln(nome.charAt(7)+"<br>");        /*mostra qual caracter esta nesta posicao*/             
+          
+            document.writeln(nome.indexOf("g")+"<br>");     /*mostra em qual posicao esta, neste caso a letra "g" se encontra na posicao"0" .*/
+
+            document.writeln(nome.replace("g","b")+"<br>");     /*pega a letra ou a cadeia de caracter e substitui por a informada apos a virgula*/
+
+            document.writeln(nome.substr(7,2)+"<br>");          /*pega a part da cadeia de caracter e mostra somente a parte apartir da posição informada  e 
+                                                                quantos casas a frente, no caso apartir da 7ª e duas casas contando a setima */
+
+                                                             
+           document.writeln(nome.toUpperCase("gilmar")+"<br>"); /*pega todas as letras e transforma em caixa alta*/
+        
+           document.writeln(nome.toLowerCase("gilmar")+"<br>"); /*pega todos as letras e transforma em caixa baixa*/
+
+           document.write(nome.trim());                         /*tira todos os espaços em branco  antes e depois, NAO tira entre a frase*/
+
+
+
+        </script>
+
+
+    </head>
+
+    <body>
+    
+</body>
+
+</html>

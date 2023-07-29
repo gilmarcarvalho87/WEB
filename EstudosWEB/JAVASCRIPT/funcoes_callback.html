@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <title>Callback</title>
+
+        <script>
+
+            /*Funcao principal*/
+            function exibirArtigo(id,titulo,descricao){
+                if(true){
+                    callbacksuccess("titulo","descricao");
+                }else{
+                    callbackerro("Erro");
+                }
+            }
+
+            var callbacksuccess= function(titulo,descricao) {
+                document.write("<h1>"+titulo+"</h1>");
+                document.write("<hr>");
+                document.write("<h3>"+descricao+"</h3>");
+            }
+
+            var callbackerro= function(erro) {
+                document.write("<h2>"+erro+"");
+            }
+
+
+            exibirArtigo(1,callbacksuccess,callbackerro);
+  
+
+
+        </script>
+
+
+    </head>
+
+    <body>
+    
+</body>
+
+</html>
