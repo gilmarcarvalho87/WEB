@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <title>Desafio</title>
+
+        <script>
+
+            var num1 = prompt("Digite um valor : ");
+            var operacao = prompt("Digite um tipo de operação[soma]ou[subtracao]: ");
+            var num2 = prompt("Digite outro valor : ");
+
+
+            
+            function calc(num1,num2,operacao){
+
+                num1 = parseFloat(num1); 
+                num2 = parseFloat(num2); 
+
+                
+                var resultado=0;
+
+                if(operacao == "soma") {             
+                   resultado= num1 + num2;   
+
+                }
+                if(operacao == "subtracao"){                    
+                    resultado= num1 - num2;  
+
+                }
+               return resultado;  
+                
+            }
+            document.write("O resultado é : "+ calc(num1,num2,operacao));
+
+        </script>
+
+
+    </head>
+
+    <body>
+    
+</body>
+
+</html>

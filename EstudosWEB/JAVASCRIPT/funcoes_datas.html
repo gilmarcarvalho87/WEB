@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <title>Funcoes de Datas</title>
+
+        <script>
+           
+           var data = new Date;
+            /*formatando a data completa. note que para ter o mes correto temos que adicionar  +1 ao final, pois o mes inicia em 0*/
+           document.writeln("<h3><b> O dia de hoje é "+data.getDate()+ "/" +(data.getMonth()+1) +"/"+  (data.getFullYear()));
+
+            document.write("<hr>")
+     
+            /*horario base deste codigo*/
+
+            document.writeln("<h3>"+ data.toString() +"</h3>");
+            document.write("<hr>")
+
+             /*setando mais datas*/          
+            data.setDate(data.getDate()+5);
+            document.writeln(data.toString());
+      
+            document.write("<hr>")
+
+             /*setando menos meses*/       
+            data.setMonth(data.getMonth()-5);
+            document.writeln(data.toString());
+
+            
+            document.write("<hr>")
+
+             /*setando anos meses*/       
+            data.setFullYear(data.getFullYear()-16);
+            document.writeln(data.toString());
+            document.write("<hr>")
+
+
+
+            document.write("duvida! quantos dias temos de diferença entre hoje e o ano 2007? <BR>");
+             /*logica*/   
+         
+
+             var ano_atual = data.getFullYear();
+             document.write(ano_atual + "<br>")
+            
+            
+    
+
+
+        
+
+            
+
+
+             
+         
+    
+
+
+
+
+        </script>
+
+
+    </head>
+
+    <body>
+    
+</body>
+
+</html>
