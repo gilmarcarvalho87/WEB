@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <title>Desenho praia em CSS</title>
+
+        <style> 
+            @keyframes faixa-pista {
+                from {
+                    position: absolute;
+                      bottom: 50px;   
+
+                }
+
+                to {
+                    position: absolute;
+                     bottom: 50px;   
+                     left: 2000px;
+                }
+               
+              
+            }
+            @keyframes moita {
+                from {
+                    position: relative; top: -150px; 
+                    left: 1200px;
+                }
+
+                to {
+                    position: relative; top: -150px; 
+                }
+               
+              
+            }
+
+            body{
+                background: linear-gradient(100deg,#07091fdc, #4673e6f8,#07091fc4);            
+                height: auto;
+               
+            }
+            input {
+              background-color:#fff;
+              height: auto;
+              width: auto;
+            }
+            .lua{
+                background-color: rgba(197, 191, 176, 0.911);
+                height: 150px;
+                width: 150px;
+                margin: 0 auto  ;
+                
+                border-radius: 100%;
+                box-shadow: 5px 5px 50px 20px rgba(50, 207, 235, 0.589);
+            }
+            .lua-reflexo{
+                background-color: rgba(197, 191, 176, 0.911);
+                height: 150px;
+                width: 140px;
+                margin: 40px auto;
+                border-radius: 100%;
+                box-shadow: 5px 5px 50px 20px rgba(108, 218, 238, 0.589);
+                position: relative;
+                top: 190px;
+                opacity: 50%;
+               
+               
+            }
+            .mar{
+                background-color: #0d156e;
+                height: 350px;
+                width: 30000px; 
+                margin-top: 20px; 
+            
+                
+                box-shadow: 0 10px 10px 20px rgba(37, 69, 173, 0.644);
+            }
+            .onda{
+                background-color: #f1efe9;
+                height: 10px;
+                box-shadow: 0 5px 10px 20px  rgba(240, 238, 237, 0.993);
+
+            }
+            .areia{
+                background-color: #ebcc94;
+                height: 50px;
+                width: 100%;               
+                box-shadow: 0 5px 10px 10px  rgba(202, 132, 39, 0.466);
+            }
+            .canteiro{
+                background-color: #08290d;
+                height: 20px;
+            }
+            .meiofio{
+                background-color: #b37b03;
+                height: 15px;
+            }            
+            .meiofio-faixa{
+                background-color: #fff;
+                height: 15px;
+                width: 80px;
+                margin-left: 80px;
+                margin-right: 80px;
+                display: inline-block;
+            } 
+            .rua{
+                background-color: #000;
+                height: 200px;
+                opacity:70%;
+            }
+            .faixa-central{
+                background-color: #fff;
+                height: 15px;
+                width: 80px;
+                margin-left: 80px;
+                display: inline-block;         
+                -webkit-animation:normal;  
+                -webkit-animation-duration: 2s;
+                -webkit-animation-direction: normal;                 
+                -webkit-animation-name: faixa-pista; 
+                -webkit-animation-iteration-count:200;
+            }
+            .moita{
+                width: 200px; position: relative; top: -150px; margin-left: 50px;
+                -webkit-animation:normal;  
+                -webkit-animation-duration: 2s;
+                -webkit-animation-direction: normal;            
+                -webkit-animation-name: moita; 
+                -webkit-animation-iteration-count:200;
+            }
+        
+          
+        </style>
+
+    </head>
+
+<body>
+    <div> 
+        <div class="lua">
+            <div class="lua-reflexo">
+        </div></div>
+
+        <div class="mar-borda"></div>
+        <div class="mar">
+            <img src="../IMG/barco.PNG" alt="" width="60px" style="position: relative; left:1000px;">
+        </div>
+        <div class="onda"></div>
+        <div class="areia"></div>
+        <div class="canteiro">
+            <div>
+                <img class="moita" src="../IMG/moita.png" alt="" >
+                <img class="moita" src="../IMG/moita.png" alt="" >
+                <img class="moita" src="../IMG/moita.png" alt="" >
+                <img class="moita" src="../IMG/moita.png" alt="" >
+                <img class="moita" src="../IMG/moita.png" alt="" >
+                <img class="moita" src="../IMG/moita.png" alt="" >
+                <img class="moita" src="../IMG/moita.png" alt="" >
+                
+            </div>
+        </div>   
+        <div class="meiofio">
+            
+            <div class="meiofio-faixa"> </div>
+            <div class="meiofio-faixa"></div>
+            <div class="meiofio-faixa"></div>
+            <div class="meiofio-faixa"></div>
+            <div class="meiofio-faixa"></div>
+            <div class="meiofio-faixa"></div>
+            <div class="meiofio-faixa"></div>        
+        </div>                
+        <div class="rua">              
+            <img src="../IMG/maserati.jpg" alt=""  style=" width: 350px;float: right; ">  
+            <div class="faixa-central"></div>    
+            <div class="faixa-central"></div>   
+            <div class="faixa-central"></div>     
+            <div class="faixa-central"></div>   
+            <div class="faixa-central"></div> 
+            <div class="faixa-central"></div>   
+            <div class="faixa-central"></div>     
+            <div class="faixa-central"></div>   
+            <div class="faixa-central"></div>     
+            <div class="faixa-central"></div>    
+          
+  
+         
+            
+        </div>
+
+       
+  
+
+    </div>
+       
+</body>
+<script>
+
+</script>
+
+
+</html>
