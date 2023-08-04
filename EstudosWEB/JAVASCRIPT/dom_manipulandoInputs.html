@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <title>Dom Manipulando inputs</title>
+
+        <script>     
+           
+            function caractersDigitados() {  
+
+            //captura o valor digitado na caixa de entrada
+             var caracter = document.getElementById('entrada').value; 
+
+             //limpa o campo                     
+            document.getElementById("entrada").value = ""; 
+
+
+             //limpa espacos em branco 
+            caracter.trim()          
+
+             switch (caracter) {
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                case '0':
+                  
+                    document.getElementById('apenas_numeros').value += caracter;           
+                break;               
+                   
+
+                default:
+                    document.getElementById('apenas_letras').value += caracter;                    
+                break;
+             }      
+
+
+            }
+          
+
+        </script>
+
+
+    </head>
+
+    <body>
+
+        <h2>Separador de caracters...</h2>
+        <input 
+        type="text" 
+        placeholder="Digite um numero ou letra"
+        onkeyup="caractersDigitados()"
+        id="entrada"><br><br>
+
+        <span>Letras</span>
+        <input type="text" disabled id="apenas_letras">
+
+        <span>numeros</span>
+        <input type="text" disabled id="apenas_numeros">
+        
+
+    
+    </body>
+
+</html>

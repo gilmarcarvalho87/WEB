@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <title>Dom-Manipulando cores </title>
+  
+        <script>     
+           
+            function modificaEstilo(corDeFundo) {
+              document.getElementById('tela').style.backgroundColor = corDeFundo;
+            }
+
+          
+
+        </script>
+
+
+    </head>
+
+    <body>
+
+        <h2>Manipulando cores no Dom</h2>
+      
+        <button type="button" onclick="modificaEstilo('#ff0000')">Vermelho</button>
+        <button type="button" onclick="modificaEstilo('#00ff00')">Verde</button>
+        <button type="button" onclick="modificaEstilo('#0000ff')">Azul</button>
+        <hr>
+        <div id="tela" style="border: 2px solid #000; height: 300px;width: 400px;"></div>
+
+
+
+ 
+
+    
+    </body>
+
+</html>
