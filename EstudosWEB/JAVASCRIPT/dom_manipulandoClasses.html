@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <title>Dom - Manipulando Classes </title>
+  
+        <script>     
+            function modificaClasse(){
+                document.getElementById('mensagem').className ='estilo2';
+
+            }
+         
+          
+
+        </script>
+        <style>
+             body{
+                    background:rgb(0, 200, 250,0.1)
+            }
+            .estilo1{
+                background-color: red;
+                padding: 10px;
+                border: 1px solid darkblue;
+                color: aliceblue;
+            }
+            .estilo2{
+                background-color: rgb(90, 133, 241);
+                padding: 10px;
+                border: 1px solid darkblue;
+                color: aliceblue;
+              
+            
+            }
+           
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div id="mensagem" class="estilo1">modificando a classe</div>
+        <hr>
+        <button onclick='modificaClasse()'>aplicar nova classe</button>
+
+    
+    </body>
+
+</html>
