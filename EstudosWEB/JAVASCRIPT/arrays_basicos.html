@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        
+        <title>duplica de caixa de texto</title>
+        <style>
+            body{
+                margin: 0 40%;
+            }
+            h3{
+                color: aliceblue;
+            }
+            .caixa-tela{ 
+                padding: 20px;
+                width: 250px;             
+                height: 250px;
+                background-color: rgb(3, 41, 56); 
+                border: 1px double rgb(209, 208, 212);
+                box-sizing: border-box;
+                box-shadow: 0px 0px 8px 2px  #000;
+            }
+         
+            #tela{
+                margin-top: 8px;
+                box-shadow: 0px 0px 8px 2px  #f7f4f4; 
+                color: aliceblue; 
+
+            }
+            #tela2{ 
+                margin-top: 8px;
+                box-shadow: 0px 0px 8px 2px  #f7f4f4; 
+                color: aliceblue; 
+            }
+            #tela3{ 
+                margin-top: 8px;
+                box-shadow: 0px 0px 8px 2px  #f7f4f4; 
+                color: aliceblue; 
+            }
+            
+        </style>
+       
+       
+    </head>
+
+    <body>
+       
+ 
+        
+        
+        <br><br><br>
+        <form action="">
+            <div class="caixa-tela" >
+
+                <label for="entrada"><h3>Digite Aqui</h3></label>
+                <input id='entrada' onkeyup="adicionarALista()" type="text">
+                <br><br>
+                <input id="tela" type="text" disabled>
+                 <input id="tela2" type="text" disabled>  
+                  <input id="tela3" type="text" disabled>
+            </div>
+      
+      
+
+        </form>
+    </body>
+    <script>       
+                       
+          
+        function adicionarALista(valor){
+            var dado= document.getElementById('entrada').value; 
+            document.getElementById('tela').value =dado;
+            document.getElementById('tela2').value =dado;             
+            document.getElementById('tela3').value =dado;
+             
+             
+           
+           
+
+            
+            
+    }       
+
+    
+
+</script>
+
+</html>
