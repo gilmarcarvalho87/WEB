@@ -3,63 +3,28 @@
     <head>
         <meta charset="utf-8">
         
-        <title>Adicionar a lista</title>
-        <style>
-            body{
-                margin: 0 720px;
-            }
-            .caixa-tela{ 
-                padding: 10px;
-                width: 250px;             
-                height: 250px;
-                background-color: antiquewhite; 
-            }
-            
-            #tela{
-                width: 240px;             
-            }
-        </style>
+        <title>Arrays Tipos</title>
+       
        
        
     </head>
 
     <body>
        
- 
-        
-        
-        <br><br><br>
-        <form action="">
-            <div class="caixa-tela" >
 
-                <label for=""> <h3> Digite aqui</h3></label>         
-                <input id='entrada' onblur="adicionarALista()" type="text" >
-                <input id="tela" type="text" disabled>
-          
-            </div>
-      
-
-        </form>
     </body>
-    <script>       
+    <script>     
+         
+              // var lista= []
+              // var lista= ['maca','banana','cafe','navio']
+                var lista = Array()
+                lista[0]= "maca"
+                lista[1]= "banana"
+                lista[2]= "cafe"
+                lista[3]= "navio"
+           
                        
-            var lista = Array()
-        function adicionarALista(valor){
-            var dado=  document.getElementById('entrada').value; 
-             
-            for (var n = 0; n < lista.length; n++) {
-                console.log(n).value                       
-                lista[n] = dado; 
-            }    
-           
-           
-
-            
-            
-    }       
-   console.log(lista[1])
-    
-
-</script>
+            console.log(lista)
+    </script>
 
 </html>
