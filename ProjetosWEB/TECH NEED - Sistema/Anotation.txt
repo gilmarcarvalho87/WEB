@@ -1,0 +1,7 @@
+senha root do banco
+
+TechBanco123
+
+senha admin banco
+
+TechNeed2023
