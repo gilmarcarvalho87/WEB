@@ -1,0 +1,221 @@
+    <!doctype html>
+    <html lang="pt">
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Tech Need Informática - Cadastro de Clientes</title>
+       
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <!--Shim-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/webshim/1.16.0/dev/shims/styles/shim.css">
+      
+        <!--Stilo-->
+        <link rel="stylesheet" href="../css/estiloTechneed.css">
+        <!--Icones-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+       
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">       
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+      <body>
+        <div class="fundo-container container ms-auto me-auto mt-3 border"> <!--Container inicio-->      
+        <header><!--Header inicio-->                  
+            <div id="header-superior" class="row d-flex " >      
+                  <div id="logo" class="  col-sm col-md-3 ">  <!--Logo Header -->
+                      <div > 
+                        <a href="../index.html">
+                          <img class="logo" src="../img/logo tech need.png" alt="logo">                      
+                        </a>
+                      
+                      </div>            
+                  </div>                    
+                  <div id="redesSociais" class="collapse">  <!--Redes Sociais Header-->
+                     <ul class="nav ms-auto justify-content-end" >
+                          <li class="nav-item">
+                            <a class="nav-link active" target="_blank" href="https://www.facebook.com/techneedinformatica"><i class="me-2 text-primary fa-brands fa-square-facebook"></i>facebook</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link " target="_blank" href="https://business.facebook.com/latest/inbox/all?asset_id=105438724320182&bpn_id=384720959034934&nav_ref=diode_page_inbox_comet_profile_plus_ap_page_inbox_message_button"><i class="text-info me-2 fa-brands fa-facebook-messenger"></i>Messeger</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link " target="_blank" href="https://www.instagram.com/tech.need/"><i class="me-2 fa-brands fa-instagram"></i>Instagram</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link " target="_blank" href="https://wa.me/message/EHFQQJFHLR2UI1">Whatsapp</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link " target="_blank" href="https://outlook.live.com/mail/0/">Email</a>
+                          </li>   
+                                         
+                     </ul>                        
+                        
+                  </div>          
+              
+            </div>  
+            <div id="header-inferior"   class="col-sm d-flex"><!--Menu inferior header -->
+               <div class="col-sm">                         
+                  <ul class="nav">  
+                      <li class="nav-item dropdown">                            
+                        <button class=" btn btn-primary btn-sm  m-2 dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class=" bi bi-pen"></i> Cadastrar
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#"><i class="me-2 fa-solid fa-user-plus"></i>Cadastro de Clientes</a></li>
+                          <li><a class="dropdown-item" href="#"><i class=" me-2 fa-solid fa-box-open"></i>Cadastro de Produtos</a></li>
+                        
+                        </ul>
+                      </li>
+
+                      <li class="nav-item dropdown">
+                        <button class=" btn btn-primary btn-sm  m-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="bi bi-search"></i>
+                          Pesquisar
+
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#"><i class="me-2 fa-solid fa-file-circle-check"></i>Pesquisar Ordens Serviços</a></li>
+                          <li><a class="dropdown-item" href="#"><i class=" me-2 fa-solid fa-user"></i>Pesquisar Clientes</a></li>
+                          <li><a class="dropdown-item" href="#"><i class=" me-2 fa-solid fa-box-open"></i>Pesquisar Produtos</a></li>
+                        
+                        </ul>
+                      </li>                         
+                    </ul>
+                
+                  </div>                
+                      
+              
+             
+           
+                       
+             
+               <div class="col-sm"> 
+                <div id="funcionalidades" class="col-sm-5  ms-auto "> <!--Menu Funcionalidades  -->                  
+                  <div class="ms-auto func-div">
+                    <ul class="nav justify-content-end m-1">                         
+                      <li class="nav-item me-3">
+                        <button onclick="imprimir()" class="btn btn-outline-light fa-solid fa-print"></button>
+                      </li>                            
+
+                      <li class="nav-item me-3">
+                        <i class="fa-solid fa-gear"></i>
+                      </li>
+                      
+                      <li class="nav-item me-3">
+                        <i class="fa-solid fa-folder-open"></i>
+                      </li>          
+                      
+                      <li class="nav-item me-3">
+                        <i class="fa-solid fa-trash"></i>
+                      </li>   
+
+                      <li class="nav-item me-3">
+                        <i class="fa-solid fa-gear"></i>
+                      </li>  
+                      
+                      <li>
+                        <button class="btn btn-primary fa-solid fa-bars "  data-bs-toggle="collapse"  aria-expanded="false" type="button"  data-bs-target="#redesSociais" aria-controls="redesSociais"></button>
+                      </li> 
+                    </ul>                        
+                  </div>                  
+                </div> 
+              </div>
+           </div>
+            
+        </header><!--Header fim-->  
+        <main id="main"><!--Main inicio-->  
+          <div id="tela" class="row bg-light  m-2 rounded" >
+            
+            <div class="col-sm-6" id="cadastroClientes">
+                <div class="m-2 mt-5">
+                    <label for="nome" class="form-label">Nome Completo</label>
+                    <input autofocus type="text" class="form-control" id="nome" required>
+                  </div>
+                  <div class="m-3 col-sm-6">
+                    <label for="cpf" class="form-label">CPF</label>
+                    <input type="text" class="form-control form-" id="cpf" placeholder="0000000000" minlength="11" maxlength="11" required>
+                  </div>
+                  
+                  <div class="d-flex  form-control">                 
+                  <div class="m-3 col-sm-4">
+                    <label for="telefone" class="form-label">Telefone</label>
+                    <input type="tel" class="form-control" id="telefone" placeholder="(99)99999 9999" minlength="11" maxlength="11">
+                  </div>
+                  <div class="m-3 col-sm-4">
+                    <label for="telefone" class="form-label">Whatsapp</label>
+                    <input type="tel" class="form-control" id="Whatsapp" placeholder="(99)99999 9999" minlength="10" maxlength="11">
+                  </div>
+                </div>
+
+                 
+                  <button type="submit" class="btn btn-primary m-3" onclick="enviarCadastro()" value="enviado">Cadastrar</button>
+                 
+
+                          
+            </div>
+            <div class="col-sm-6 mt-4">
+                <div class="p-3" >
+                <form method="get" action=".">
+
+                    <div class="m-2 col-sm-6">
+                        <label for="cep" class="form-label">Cep</label>
+                        <input class="form-control"  type="text" id="cep" value="" size="10" maxlength="9"  onblur="pesquisacep(this.value);">
+                    </div>
+                    
+                    
+                 
+                    <div class="m-2 col-sm">
+                        <label for="rua" class="form-label">Rua</label>
+                        <input  class="form-control" name="rua" type="text" id="rua" size="60">
+                    </div>
+                    
+                   
+                    <div class="m-2 col-sm-6">
+                        <label for="bairro" class="form-label">Bairro</label>
+                        <input class="form-control" name="bairro" type="text" id="bairro" size="40" />
+                    </div>
+                   
+                   
+                    <div class="m-2 col-sm-6">
+                        <label for="bairro" class="form-label">Cidade</label>
+                        <input class="form-control" name="cidade" type="text" id="cidade" size="40"/>
+                    </div>
+                    
+                    <div class="m-2 col-sm-1">
+                        <label for="bairro" class="form-label">UF</label>
+                        <input class="form-control" name="uf" type="text" id="uf" size="2" maxlength="2" a />
+                    </div>
+                 
+                   
+                  </form>
+                </div>
+            
+            </div>
+       
+
+
+
+
+
+
+
+
+          </div>
+        </main><!--Main fim-->              
+        </div><!--Container fim-->
+        <footer><!--Footer inicio-->  
+          <div class="d-flex justify-content-center" > &copy;CopyRight 2023-2030 Tech Need Informática  </div>
+        </footer><!--Footer fim--> 
+          
+        <script src="../js/script.js"></script>
+
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>         
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        
+     
+      </body>
+    </html>
+   

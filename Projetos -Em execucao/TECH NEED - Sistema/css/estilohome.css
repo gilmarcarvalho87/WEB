@@ -1,0 +1,330 @@
+
+/*BREAKPOINTS*/
+@media (min-width: 320px) and (max-width: 575.98px) {  
+   
+    .logo {
+        text-align: center;  
+     } 
+     .logo img{
+         width:130px;
+     }
+     #redesSociais{
+         display: flex;
+         justify-content: center;
+       
+     }
+     #redesSociais li a{        
+         font-size: 0.7rem;
+     }   
+  
+     .tela-principal{   
+         height:43em;        
+     }   
+     #menu-inferior{
+         text-align: center;       
+      
+     }
+     .funcionalidades{        
+         display: flex;
+         justify-content: center; 
+         padding: 2%;
+             
+     }.botaoTurno{
+        display: none;
+     }
+     .funcionalidades button{
+        margin-left:5px;
+    }
+     .marcaDagua{
+          display: none;
+     }
+}
+ @media (min-width: 576px) and (max-width: 767.98px) {   
+   
+    .logo {
+       text-align: center;  
+    } 
+    .logo img{
+        width:130px;
+    }
+    #redesSociais{
+        display: flex;
+        justify-content: center;
+    }
+    #redesSociais li a{        
+        font-size: 0.7rem;
+    } 
+    .botaoTurno{
+        display: none;
+    }  
+ 
+    .tela-principal{   
+        height:43em;        
+    }   
+    #menu-inferior{
+        text-align: center;        
+    }
+    .funcionalidades{        
+        display: flex;
+        justify-content: center; 
+        padding: 2%;
+            
+    }
+    .funcionalidades button{
+        margin-left:5px;
+    }
+    .marcaDagua{
+         display: none;
+    }
+} 
+ @media (min-width: 767.98px) and (max-width: 991.98px) { 
+
+    .logo {
+      position: relative;
+      left: 50%;   
+    } 
+    .logo img{   
+      
+       width: 150px;
+    }
+     #redesSociais ul{
+        display:list-item;  
+        position: relative;
+        top: 0px;
+        right: -10px;     
+    } 
+    #redesSociais li a{        
+        font-size: 0.8rem;
+    }  
+    .botaoTurno{
+        display: none;
+    }   
+    #header-superior{
+        display: flex;
+    }
+    #menu-inferior{
+        display: flex;   
+       
+    } 
+    .menu-cadastrar{        
+        text-align: start;
+     
+    } 
+    .funcionalidades{   
+       justify-content: end;
+       display: flex;  
+      
+    }
+    .funcionalidades button{
+        margin-left:5px;
+    }
+
+    .tela-principal{   
+        height:45em;        
+    }
+    
+    .marcaDagua{
+        display: none;
+    }
+}
+ @media (min-width: 991.98px) and (max-width:1199.98px) {   
+    .logo img{       
+        width: 100px;
+    }
+     #header-superior{
+        display: flex;
+    }
+    
+    #redesSociais nav{
+        display:flex;
+        justify-self: end;
+   
+    }
+    #redesSociais li a{        
+        font-size: 0.9rem;
+    } 
+   
+    .tela-principal{   
+        height:49em;        
+    }
+    
+    #menu-inferior{
+        display: flex;
+    }    
+}
+ @media (min-width: 1199.98px) and (max-width:1399.98px) { 
+    .logo img{       
+        width: 100px;
+     }
+    
+    #header-superior{
+        display: flex;
+    }
+    
+    #redesSociais{
+        display: flex;
+       justify-content: end;
+      
+    }
+    #redesSociais li a{        
+        font-size: 0.9rem;
+    } 
+    .tela-principal{   
+        height:49em;        
+    }
+    
+    #menu-inferior{
+        display: flex;
+    }
+}
+ @media(min-width:1400px){    
+    #header-superior{
+        display: flex;
+    }
+
+    #redesSociais{
+        display: flex;
+       justify-content: end;
+    }
+    #redesSociais li a{        
+        font-size: 0.9rem;
+    } 
+    .tela-principal{   
+        height:49em;        
+    }
+    #menu-inferior{
+        display: flex;
+    }
+}
+
+/*Estrutura base*/
+html{
+    font-size:0.9rem;
+   
+}
+body{
+    background: linear-gradient(90deg,#000,rgb(2, 152, 233),black);
+    color:#fff;
+}
+.logo img{       
+    width: 100px;
+ }
+.fundo-container{
+    background:url(../img/fundotec.jpg)no-repeat; 
+    background-size: cover ;  
+    box-shadow:0px 0px 15px 5px #0f79c5;
+
+    height: 910px;  
+    min-height: 300px;
+    max-height: 1200px;
+
+    width:80%;  
+    min-width:320px ;
+    max-width: 1440px;   
+}
+
+
+
+
+button{
+   /* background: linear-gradient(190deg,rgb(29, 5, 97),rgb(11, 146, 156));*/
+    font-size:0.8rem;
+}
+a{
+    color: #fff;
+}
+.logo{
+    padding:5px;
+    margin: 5px;
+    
+}
+/*Rede Sociais*/
+#redesSociais a{
+    font-size: 1rem;
+    color: #fff;
+}
+#redesSociais a:hover{   
+    color: #09bde6; 
+}
+.botao-redes{ 
+    color: #fff ;
+}
+.icone-email{
+    margin-left: -4px;
+}
+.botaoTurno{
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    margin-top: 5px; 
+ 
+}
+.imgBotaoTurno{
+    padding: 9px;
+    background: url(../img/icons/sun-fill.svg) no-repeat;
+}
+    
+   
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tela-principal{  
+   
+    background-color: rgba(237, 241, 241, 0.842);
+}
+
+
+
+
+/*Menu Inferior*/
+#menu-inferior li a:hover{
+    background-color: #09bde65e;    
+}
+/*Funcionalidades*/
+#funcionalidades li{
+    padding:2px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MAIN */
+
+
+
+
+/*FOOTER*/
+footer{    
+    font-size: small;
+}
+
+

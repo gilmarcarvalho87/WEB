@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2021 (64 Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="210mm" height="297mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 21000 29700"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#373435;stroke-width:20;stroke-miterlimit:22.9256}
+    .fil0 {fill:none}
+   ]]>
+  </style>
+    <clipPath id="id0">
+     <rect x="1335.37" y="9685.33" width="3811.86" height="3671.83"/>
+    </clipPath>
+    <clipPath id="id1">
+     <rect x="6991.88" y="9594.36" width="3772.35" height="3853.78"/>
+    </clipPath>
+ </defs>
+ <g id="Camada_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2318026528768">
+   <circle class="fil0 str0" cx="6095.72" cy="11521.25" r="5000"/>
+   <g style="clip-path:url(#id0)">
+    <image id="pngwing.com_x0020__x0028_54_x0029_.png" x="1335.37" y="9685.34" width="3811.85" height="3671.82" xlink:href="Sol_Images\Sol_ImgID1.png"/>
+   </g>
+   <g style="clip-path:url(#id1)">
+    <image id="pngwing.com_x0020__x0028_53_x0029_.png" x="6991.88" y="9594.37" width="3772.34" height="3853.77" xlink:href="Sol_Images\Sol_ImgID2.png"/>
+   </g>
+  </g>
+ </g>
+</svg>
