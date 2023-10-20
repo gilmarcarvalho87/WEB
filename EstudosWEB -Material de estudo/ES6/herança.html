@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Heranca</title> 
+   <!--Babel-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+     
+<script type="text/babel">
+      
+        class Animal{
+          constructor(){
+            this._cor = '';
+            this._tamanho = null;
+            }
+        } 
+
+        class Cachorro extends Animal{
+          constructor(){   
+            super()      
+            this._cor = 'branco e marrom';
+            this._tamanho = 30;
+            this._orelhas='grandes e caidas';         
+        }
+        correr(){
+            console.log('correr')
+        }
+        dormir(){
+            console.log('dormir')
+        }
+        rosnar(){
+            console.log('rosnar')
+        }
+
+    
+    }
+        class Passaro extends Animal{
+            constructor(){  
+                super()    
+                this._cor = 'branco e marrom';
+                this._tamanho = 10;      
+                this._bico='curto'
+
+            }
+            voar(){
+                console.log('Voar')
+            }
+            dormir(){
+                console.log('dormir')
+            }
+        }
+
+        let cachorro = new Cachorro();
+        let passaro = new Passaro();
+
+       passaro.dormir();
+       cachorro.dormir();
+
+</script>
+
+</head>
+<body>
+
+
+</body>
+</html>

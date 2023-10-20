@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstracao</title>
+
+    <script>
+        class ContaBancaria{
+            //agencia
+            //conta
+            //saldo
+            //limite
+
+            constructor(){
+                this.agencia = 1075;
+                this.numeroConta = 835212710
+                this.saldo =  500;
+                this.limite = 200;
+           }
+
+           depositar(valorDeposito){
+                this.saldo += valorDeposito;
+           }
+           sacar(valorSaque){
+                this.saldo -= valorSaque;
+
+           }
+           consultarSaldo(){
+                return this.saldo;
+           }
+        }     
+
+          //Podemos criar instancias desta forma 
+           let conta1 = new ContaBancaria();
+           let conta2 = new ContaBancaria();   
+
+           console.log(conta1.saldo); 
+
+           
+           
+             //Podemos criar instancias em arrays
+                let contas = Array()
+           
+           contas.push(new ContaBancaria(10,5585896,200,500))
+           contas.push(new ContaBancaria(10,656853,200,500))
+           contas.push(new ContaBancaria(10,656985,200,500))
+           contas.push(new ContaBancaria(10,6569875,200,500))
+
+           console.log(contas)
+
+       
+      
+        
+    </script>
+
+</head>
+<body>
+    
+    
+
+
+</body>
+</html>
