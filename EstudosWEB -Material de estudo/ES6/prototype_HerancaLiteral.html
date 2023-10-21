@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Prototype -heranca</title> 
+   <!--Babel-->     
+   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script>
+    let animal = {attr1:'a'}
+    let vertebrado = {__proto__:animal, attr2: 'b'}
+    let ave = {__proto__:vertebrado, attr3:'c'}
+   
+    console.log(ave.attr3,ave.attr2,ave.attr1)
+
+</script>
+</head>
+<body>
+
+  
+</body>
+</html>

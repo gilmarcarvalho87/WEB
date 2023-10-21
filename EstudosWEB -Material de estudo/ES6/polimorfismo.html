@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Polimorfismo</title> 
+   <!--Babel-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+     
+<script>
+      
+        class Animal{
+          constructor(cor,tamanho,peso){
+            this._cor = cor;
+            this._tamanho = tamanho;
+            this._peso= peso;
+            }       
+
+  
+     
+        dormir(){
+            console.log('dormir')
+        }
+     
+
+    
+    }
+        class Passaro extends Animal{
+            constructor(bico,cor,tamanho,peso){  
+                super(cor,tamanho,peso)    
+                this._bico=bico;
+
+            }
+            voar(){
+                console.log('Voou')
+            }          
+        }
+        class Papagaio extends Passaro{
+            constructor(sabeFalar,cor,tamanho,peso){
+                super('Medio',cor,tamanho,peso)
+                this._sabeFalar = sabeFalar
+            }
+            falar(){
+                console.log('falou')
+            }
+        }
+        class Avestruz extends Passaro{
+            constructor(bico,cor,tamanho,peso){
+                super(bico,cor,tamanho,peso)
+            }
+
+            enterrarCabeca(){
+                console.log("enterrou a cabeça")
+            }
+            voar(){
+                console.log("Nao voa")
+            }
+        }
+
+        let arrayPassaros= Array()
+         arrayPassaros.push(new Papagaio(true,"verde",25,350))     
+         arrayPassaros.push(new Papagaio(false,"blue",30,150))    
+
+        arrayPassaros.push(new Avestruz("Grande","Cinza",250,15000))
+        
+        
+
+        console.log(arrayPassaros[2].voar())
+   
+      
+</script>
+
+</head>
+<body>
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Objetos estaticos</title> 
+   <!--Babel-->     
+   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script>
+
+    let Carro= function(){
+        this.cor='Amarelo';
+        this.modelo='chevette';
+        this.velocidadeAtual= 0;
+        this.velocidadeMaxima=180;
+
+        this.acelerar = function(){
+            this.velocidadeAtual+= 10;        
+        }
+        this.getVelocidadeAtual= function(){
+            return this.velocidadeAtual;
+        }
+        this.setVelocidadeAtual= function(velocidadeAtual){
+             this.velocidadeAtual = velocidadeAtual;
+        }
+    }
+
+    let carro = new Carro()
+
+        console.log(`A velocidade atual é ${carro.getVelocidadeAtual()}`)
+        carro.acelerar()
+        carro.acelerar()
+        carro.acelerar()
+        carro.acelerar()
+        carro.acelerar()
+        console.log(`A velocidade atual é ${carro.getVelocidadeAtual()}`)
+
+
+   
+
+</script>
+</head>
+<body>
+
+  
+</body>
+</html>

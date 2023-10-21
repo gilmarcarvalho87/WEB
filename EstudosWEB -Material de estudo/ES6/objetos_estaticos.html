@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Objetos estaticos</title> 
+   <!--Babel-->     
+   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script>
+    
+
+    //dinamico
+    class Produto{
+        constructor(descricao,preco){
+            this._descricao= descricao;
+            this._preco= preco;
+        }
+
+        verDescricao(){
+            console.log(`${this._descricao} por apenas ${this._preco}`)
+        }
+
+
+    }
+
+     let produto = new Produto('Notebook',2200)
+  
+     let produtoEstatico = {
+        descricao:'Geladeira',
+        preco:1800,
+        verDescricao: function(){
+            console.log(`${this.descricao} por apenas ${this.preco}`)
+        }
+    }
+    produtoEstatico.verDescricao()
+
+
+</script>
+</head>
+<body>
+
+  
+</body>
+</html>
