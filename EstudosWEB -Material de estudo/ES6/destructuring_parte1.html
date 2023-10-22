@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Destructuring</title> 
+   <!--Babel-->     
+   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script>
+
+let frutas =["abacaxi","Uva","Pera","Mamao"];
+let [a,b,c="uva",d,e] =frutas;
+//console.log(a,b,c,d,e)
+
+//nao poderei setar valores as letras ja setados, somente aos nao setados como a letra "e" que esta indefinida
+
+//arrra bidimensional
+let coisas= [["abacaxi","Uva","Pera","Mamao"],["Joao","Maria"]]
+let [  ,[ ,n2]] = coisas
+
+console.log(n2)
+
+</script>
+</head>
+<body>
+
+  
+</body>
+</html>
