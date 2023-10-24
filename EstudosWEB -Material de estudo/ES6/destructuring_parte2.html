@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Destructuring</title> 
+   <!--Babel-->     
+   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script>
+    //Spread em literal
+    let produto ={
+        descricao:"Notebook",
+        preco:1800,
+        detalhes:{
+            fabicante: "abc",
+            modelo:"xyz"
+        }
+    }
+
+    let{descricao:d,preco}=produto;
+    console.log(d,preco)
+
+    let {detalhes:{fabicante,modelo}}=produto
+</script> 
+</head>
+<body>
+
+  
+</body>
+</html>
