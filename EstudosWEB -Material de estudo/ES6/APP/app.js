@@ -38,17 +38,37 @@ class BD{
         let proximoId= localStorage.getItem("id")
         return(parseInt(proximoId)+1) 
     }
-
-
     gravar(d){
    
        let idAtualizado = this.getProximoId()
+
+       
        localStorage.setItem(idAtualizado, JSON.stringify(d))
        localStorage.setItem("id",idAtualizado)
+    }
+    recuperarTodosRegistros(){
+        let despesas = Array()
+
+        let id= localStorage.getItem("id")
+        
+        //recupera todas as dispesas do local estorage pelo numero do indice dele
+        for (let i= 1; i <= id; i++) {
+
+            //Transforma um json em literal
+         let despesa = JSON.parse(localStorage.getItem(i))
+          
+         despesas.push(despesa)
+
+         console.log(despesas)
+
+
+        }
+    
     }
     
 }
 let bd = new BD;
+
 
 function cadastrarDespesas(){  
  let ano = document.getElementById('ano').value;
@@ -94,4 +114,7 @@ function cadastrarDespesas(){
 
     
   
+}
+function carregaListaDespesas(){
+    bd.recuperarTodosRegistros()
 }
