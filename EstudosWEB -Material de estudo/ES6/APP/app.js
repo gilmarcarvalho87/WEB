@@ -85,7 +85,7 @@ function cadastrarDespesas(){
 
 
   if (despesa.validarDados()) {       
- 
+        //tornanndo dinamico  
         //seleciona determinada tag html que gostariamos de manipular  
         document.getElementById('modal-title').innerHTML="Parabéns";
         document.getElementById('modal-title').style.color="green"
@@ -109,7 +109,7 @@ function cadastrarDespesas(){
         
         $("#modalRegistraDespesa").modal("show")
        
-  }
+  } 
     
 
     
