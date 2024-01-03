@@ -1,0 +1,3 @@
+3#andamento# tela# Hardware# nao liga
+3#andamento# office# Software# nao abre
+3#andamento# impressao# Impressora# travou
