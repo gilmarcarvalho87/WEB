@@ -1,0 +1,12 @@
+<?php
+function sendMail($destinario,$assunto,$mensagem){}
+
+sendMail(
+    //agora podemos dar nomes direcionando os dados dos argumentos,podendo assim trocar de ordem tambem.
+    assunto: "novas features",
+    mensagem: "mostrar o que mudou",
+    destinatario:"gilmargilmar@gmail.com"
+);
+
+
+?>

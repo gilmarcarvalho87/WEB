@@ -22,14 +22,11 @@
   				
 					<div class="card-body font-weight-bold">
 						<form action="processa_envio.php" method="post" >
-							<div class="form-group">
+							 
+							<div class="form-group"> 								
 								<label for="para">Para</label>
 								<input name="para" type="text" class="form-control" id="para" placeholder="email@dominio.com.br">
-							</div>
-							<div class="form-group">
-								<label for="para">Copia</label>
-								<input name="copia" type="text" class="form-control" id="para" placeholder="email@dominio.com.br">
-							</div>
+							</div>					
 
 							<div class="form-group">
 								<label for="assunto">Assunto</label>
