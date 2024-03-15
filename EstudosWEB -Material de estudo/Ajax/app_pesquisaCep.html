@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Pesquisador de  Cep</title>
+   
+  
+</head>
+<body>
+
+    <nav class="container bg-light navbar p-3 mt-2">
+        <h3 class="navbar-brand ms-4">App Pesquisa Cep</h3>
+    </nav>
+    <main class="container ">
+        <form action="">
+            <div class="form-group ">
+                <div class="row p-2 pt-5">
+                    <div class="col-sm-3">
+                        <input class="form-control" onblur="getCep(this.value)" type="text" name="" id="" placeholder="Cep">
+                    </div>
+                    <div class="col-sm-9">
+                        <input class="form-control bg-light" type="text" name="" id="logradouro" placeholder="Endereço" readonly >
+                    </div>
+                </div>
+                <div class="row p-2">
+                    <div class="col-sm-6">
+                        <input class="form-control bg-light" type="text" name="" id="bairro" placeholder="Bairro" readonly>
+                    </div>
+                    <div class="col-sm-4">
+                        <input class="form-control bg-light" type="text" name="" id="localidade" placeholder="Cidade" readonly>
+                    </div>
+                    <div class="col-sm-2">
+                        <input class="form-control bg-light" type="text" name="" id="uf" placeholder="UF" readonly>
+                    </div>
+                </div>         
+            </div>
+        </form>
+    </main>
+    
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>  
+    <script>
+
+        function getCep(cep){
+            let url = "https://viacep.com.br/ws/"+cep+"/json/";
+        
+           let xmlHttp = new XMLHttpRequest();
+           xmlHttp.open('GET',url);
+           xmlHttp.onreadystatechange= () => {
+                if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
+                    let resquestCompleto= true;
+                    let dadosJsonText =  xmlHttp.responseText;                   
+                    let dadosJsonObj= JSON.parse(dadosJsonText);       
+                            
+                   document.getElementById('logradouro').value= dadosJsonObj.logradouro
+                   document.getElementById('bairro').value= dadosJsonObj.bairro
+                   document.getElementById('localidade').value= dadosJsonObj.localidade
+                   document.getElementById('uf').value= dadosJsonObj.uf             
+        
+              
+                }
+                        
+                                   
+           }
+            
+           xmlHttp.send();      
+        
+        
+        
+        
+        
+        }
+    </script>
+</body>
+
+</html>
