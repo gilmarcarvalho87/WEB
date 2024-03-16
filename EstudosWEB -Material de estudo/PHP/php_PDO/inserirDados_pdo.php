@@ -4,15 +4,16 @@
       $conexao = new PDO('mysql:host=localhost;dbname=php_banco_pdo','root','');
 
                 //criando a tabela 
-        $query = '
-        create table if not exists tb_usuarios(
-            id int not null primary key auto_increment,
-            nome varchar(50)not null,
-            email varchar(100)not null,
-            senha varchar(32)not null
-        )       
-        
-        ';
+        $query = 'insert into tb_usuarios(nome,email,senha)
+         values 
+         ("Gilmar carvalho","gilmrcarvalho@gmail.com",1234),    
+         ("Jorge Sant","jorgesant@gmail.com",76545),     
+         ("Giovanni","vani@gmail.com",87689900),      
+         ("Grabriel ","biel@gmail.com",65489),      
+         ("Rafael","rafa@gmail.com",998887)
+         ';
+
+         
         $conexao ->exec($query);
         
         
