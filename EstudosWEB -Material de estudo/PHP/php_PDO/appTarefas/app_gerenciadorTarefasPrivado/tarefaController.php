@@ -4,7 +4,9 @@ require"../../app_gerenciadorTarefasPrivado/conexao_pdo.php";
 require"../../app_gerenciadorTarefasPrivado/tarefaModel.php";
 require"../../app_gerenciadorTarefasPrivado/tarefaService.php";
 
-if(isset($_POST['acao']) && $_POST['acao'] == 'inserir') {    
+$acao = isset($_GET['acao'])? $_GET['acao'] : $acao;
+
+if($acao == 'inserir') {    
         
             $tarefa = new Tarefa();
         //salva o valor que vem do front e salva na variavel
@@ -17,17 +19,13 @@ if(isset($_POST['acao']) && $_POST['acao'] == 'inserir') {
 
         $tarefaService->inserir();
         header("location:nova_tarefa.php?inclusao=1"); 
-}else{
         
-
-
+} else if($acao == 'recuperar'){
+        $tarefa = new Tarefa();
+        $conexao = new Conexao();
+        $tarefaService = new TarefaService($conexao,$tarefa);
+        $tarefas = $tarefaService->recuperar();
 }
-
-
-
-    
-
-
 
 
 ?> 
