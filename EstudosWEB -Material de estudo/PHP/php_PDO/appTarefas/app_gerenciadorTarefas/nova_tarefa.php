@@ -7,7 +7,7 @@
 
 		<link rel="stylesheet" href="css/estilo.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 	</head>
 
@@ -50,7 +50,7 @@
 								<form method="POST" action="tarefaController.php?acao=inserir">
 									<div class="form-group">
 										<label>Descrição da tarefa:</label>
-										<input type="text" name="tarefa" class="form-control" placeholder="Exemplo: Lavar o carro">
+										<input type="text" name="tarefa" autofocus class="form-control" placeholder="Exemplo: Lavar o carro">
 									</div>
 
 									<button class="btn btn-success">Cadastrar</button>

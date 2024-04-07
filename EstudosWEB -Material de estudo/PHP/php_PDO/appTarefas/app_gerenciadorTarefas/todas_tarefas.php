@@ -1,9 +1,6 @@
 <?php 
 $acao ='recuperar';
 	require 'tarefaController.php';
-	
-	
-
 ?>
 <html>
 	<head>
@@ -13,15 +10,16 @@ $acao ='recuperar';
 
 		<link rel="stylesheet" href="css/estilo.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<script>
+		
 				function editar(id,txt_tarefa){
 					//Criacao de formulario edicao
 					let form = document.createElement('form');
-						form.action="#";
+						form.action='tarefaController.php?acao=atualizar';
 						form.method='POST';
-						form.className='row d-flex  mt-4';
-						
+						form.className='row d-flex  mt-4';			
 					
 
 					let caixa = document.createElement('input');
@@ -29,27 +27,42 @@ $acao ='recuperar';
 						caixa.name='tarefa';
 						caixa.className='col-10 form-control ';
 						caixa.value=txt_tarefa;	
-						caixa.id='tarefa';				
+						caixa.id='tarefa';							
 						
+					let inputId = document.createElement('input');
+						inputId.type="hidden";
+						inputId.value=id;
+						inputId.name='id'
+
+
 					let botao = document.createElement('button');
 						botao.type='submit';
-						botao.className='col btn btn-success';
+						botao.className='col btn btn-info';
 						botao.innerHTML='Atualizar';
 
-						//arvore						
+						//arvore de elementos						
 						form.appendChild(caixa);
+						form.appendChild(inputId);
 						form.appendChild(botao);
 
 						//selecionar a div da tarefa
 					let tarefa= document.getElementById('tarefa_'+ id );
-						tarefa.innerHTML="";						
-						tarefa.insertBefore(form,tarefa[0]);						
-					}
+						tarefa.innerHTML="";	
+						tarefa.insertBefore(form,tarefa[0]);
+						
 					
 						
-
-
 					
+				}
+				function remover(id){			
+					location.href='todas_tarefas.php?acao=remover&id='+id; 
+				}
+				function marcarRealizada(id){			
+					location.href='todas_tarefas.php?acao=marcarRealizada&id='+id; 
+				}
+				
+				
+						
 			
 		</script>
 
@@ -87,13 +100,24 @@ $acao ='recuperar';
 								<? foreach($tarefas as $indice => $tarefa){?>				
 									
 									<div class="row mb-3 d-flex align-items-center tarefa">
-									<div class="col-sm-9" id="tarefa_<?=$tarefa->id ?>" >
+									<div class="col-sm-9" id="tarefa_<?=$tarefa->id ?>">
 												<?=$tarefa->tarefa?> (<?=$tarefa->status?>)
 									</div>
-										<div class="col-sm-3 mt-2 d-flex justify-content-between">
-											<i class="fas fa-trash-alt fa-lg text-danger"></i>
-											<i class="fas fa-edit fa-lg text-info"  onclick="editar(<?=$tarefa->id ?>,'<?=$tarefa->tarefa?>' )"></i>
-											<i class="fas fa-check-square fa-lg text-success"></i>
+									<div class="col-sm-3 mt-2 d-flex justify-content-between">										
+										<i class="fas fa-trash-alt fa-lg text-danger" onclick="remover(<?=$tarefa->id ?>)"></i>
+									
+										<?if($tarefa->status != 'realizado'){ ?>
+												<i class="fas fa-edit fa-lg text-info"  onclick="editar(<?=$tarefa->id ?>,'<?=$tarefa->tarefa?>' )"></i>
+										<? } ?>	
+											<?if ($tarefa->status != 'realizado') { ?>
+												<i class="fa-solid fa-xmark text-danger fa-lg" name="checkBox" onclick="marcarRealizada(<?=$tarefa->id ?>)"></i>
+																								
+											<?}?>
+											<?if ($tarefa->status == 'realizado') {?>
+												<i class="fa-solid fa-check text-success" name="checkBox" onclick="marcarRealizada(<?=$tarefa->id ?>)"></i>
+														
+											<?}?>							
+											
 										</div>
 									</div>							
 								<? } ?>
