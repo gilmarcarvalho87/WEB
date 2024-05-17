@@ -4,62 +4,32 @@
 		<meta charset="UTF-8">
 		<title>Eventos com jquery2</title>
 
-		<style>
-			
-		</style>
-
+		
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 		<script>
 		$(document).ready(()=>{	
-			// capturando eventos,usando arrow functions		
-			$('#onload').html('pagina carregada') 
-
-			$(window).scroll(() => {
-				$('#scroll').html('scroll ativo')
-			})
-			$(window).resize(()=>{
-				$('#janela').html('Janela modificada')
-			})
+		
 			
-
-				//eventos do mouse
-				$('#caixa').mouseover(()=>{
-					$('#caixa').css({'background-color':'pink'})				
-				})
-				$('#caixa').mouseleave(()=>{
-					$('#caixa').css({'background-color':'red'})				
-				})
-
-				$('#caixa').click(()=>{
-					$('#caixa').css({'background-color':'gray'})				
-				})
-
-				$('#caixa').dblclick(()=>{
-					$('#caixa').css({'background-color':'green' })				
-				})
-
-				//capturando evento e usando o target
-				$('#btn1').click( e => { 
-					console.log(e)
-					$('#caixa').css('background-color','#000')
+				  $('#inputNome').keyup( e => {
 					
-				})
+					  if(e.keyCode == 13){
+						let txt= $(e.target).val()						
+						$('#respostaInput').html(txt)		
+						
+						/*caso queira limpar a caixa
+						$(e.target).val(' ')	
+						*/				
+					}
 
-				$('#btn2').mouseup( function(){ 
-					console.log('btn2')
-				})
-				
-				// capturando a posicao dentro da caixa
-				$('#caixa').mousemove( e => {
-					$('#location-box').html("X: "+e.offsetX+" Y: "+e.offsetY )				
-				}
-
-				)
+					
 
 
-
-
-									
+						
+					
+					})	
+										 
+								
+												
 		})
 		</script>
 	</head>
@@ -71,37 +41,24 @@
 		</div>
 
 		<div>
-			<h3>Browser</h3>
-			<span >Onload: </span><span id="onload">?</span><br />
-			<span>Scroll: </span><span id="scroll">?</span><br />
-			<span>Resize window: </span><span id="janela">?</span>
 			
-
-			<hr />
-
-			<h3>Mouse</h3>
-			<button type="button" id="btn1">Clique aqui</button>
-			<button type="button" id="btn2">Clique aqui 2x</button>
-			<div id="caixa" style="width: 80px; height: 50px; margin-top: 10px; margin-bottom: 10px"></div>
-			<span>Resultado do evento sobre a div - </span><span id="location-box">? </span> 
-			<hr />
 
 			<h3>Teclado</h3>
 			<span>Nome:</span>
-			<input type="text" />
-			<span>Resultado do evento sobre o input</span>
+			<input type="text" id="inputNome"/>
+			<span id="respostaInput">Resultado do evento sobre o input</span>
 			<hr />
 
 			<h3>Formulário</h3>
 			<form>
 				<span>Nome:</span>
-				<input type="text" />
+				<input type="text" id="nome" >
 
 				<span>E-mail:</span>
-				<input type="text" />
+				<input type="text" id="email" >
 
 				<span>Motivo do contato:</span>
-				<select>
+				<select id="opcao">
 					<option value="">-- Selecione --</option>
 					<option value="duvida">Dúvida</option>
 					<option value="sugestao">Sugestão</option>
