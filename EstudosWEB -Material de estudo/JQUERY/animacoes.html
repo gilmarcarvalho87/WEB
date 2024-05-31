@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+		<title>Animacoes</title>
+
+		<style>
+			.btn1{
+				margin-left:265px;				
+			}		
+			.divPadrao{					
+				
+				margin: 10px 260px;			
+				height: 80px;
+				width: 80px;
+				background-color: rgb(108, 183, 226);				
+				border-radius: 10px;
+				border:  1px solid #1d1515;			
+			}
+		</style>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script>		
+
+			$(document).ready( ()=> { 			
+					$('.btn1').on('click',()=>{
+						$('.div1').animate({
+							'width':'100px',
+							'height':'100px',
+							'margin-left':'400px',							
+						},{
+							
+							start: ()=>{ console.log('iniciado')},
+							complete: ()=>{ console.log('finalizado')}
+						}).css({
+							'background':'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)'})
+					})				
+			})
+
+
+			 
+			
+		</script>
+	</head>
+
+	<body class="container">
+		
+		
+		<h2>Animações</h2>
+
+		<div class="d-flex p-2">
+			<div>
+				<h5>Amostragem</h5>	
+			<hr>
+				<button class="btn1 btn btn-info btn-sm "type="button">animate</button>				
+				<div class="divPadrao div1"></div>
+				<hr>
+			</div>				
+		</div>
+		
+		
+	
+		
+	
+	
+
+		
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+	</body>
+
+</html>
