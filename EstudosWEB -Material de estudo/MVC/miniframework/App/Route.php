@@ -1,29 +1,13 @@
 <?php
 
 namespace App;
-
-class Route{
-
-    private $routes;
+use MF\Init\Bootstrap;
 
 
-    public function __construct(){
-        $this->initRoutes();
-        $this->run($this->getUrl());
-    }
-    public function getRoutes(){
-        return $this->routes;
-    }
-    public function setRoutes(array $routes){
-        $this->routes=$routes;
-    }
-    public function run($url){
-      
-      
-    }
+class Route extends Bootstrap{
 
-
-    public function initRoutes(){
+   
+    protected function initRoutes(){
         $routes['home']=array(
             "route"=>"/",
             "controller"=>"indexcontroller",
@@ -34,13 +18,16 @@ class Route{
             "controller"=>"indexcontroller",
             "action"=>"sobre_nos"
         );
+        $routes['contato']=array(
+            "route"=>"/contato",
+            "controller"=>"indexcontroller",
+            "action"=>"contato"
+        );
+      
        $this->setRoutes($routes);
      
     }
-    public function getUrl(){
-       // return parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH);
-        return $_SERVER['REQUEST_URI'];
-    }
+   
 }
 
 ?>
