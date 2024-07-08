@@ -1,10 +1,11 @@
 <hr>
-<h3>Sobre nos</h3>
-
+<h1>Sobre nos</h1>
 
 <?php
-    foreach ($this->view->dados as $key => $value) {
-        echo"<pre>";
-         echo  $value;
-     }
-?>
+
+    foreach ($this->view->dados as $key => $info) { ?>
+       
+      <h4> <?=$info['titulo']?></h4></br>
+      <h6> <?=$info['descricao']?></h6>
+        
+<?php } ?>

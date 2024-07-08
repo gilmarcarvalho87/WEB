@@ -2,8 +2,9 @@
 <h3>Index</h3>
 <?php
 
-    foreach ($this->view->dados as $key => $value) {
-       echo"<pre>";
-        echo $value;
+   foreach ($this->view->dados as $key => $produto) {    
+    
+         echo $produto['id']."- ".$produto['descricao']." - R$".str_replace(".",",",$produto['preco'])."</br>";
+        
     }
 ?>
