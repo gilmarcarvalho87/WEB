@@ -17,6 +17,19 @@ class  IndexController extends Action{
         public function inscreverse(){        
             $this->render('inscreverse');
         }
+        public function registrar(){        
+            //receber os dados do front com Post
+            echo"<pre>";
+                print_r($_POST);
+            //sucesso
+            
+
+
+            //erro
+
+
+
+        }
         
        
     
