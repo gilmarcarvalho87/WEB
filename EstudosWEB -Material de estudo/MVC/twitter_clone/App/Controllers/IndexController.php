@@ -19,9 +19,19 @@ class  IndexController extends Action{
         }
         public function registrar(){        
             //receber os dados do front com Post
-            echo"<pre>";
-                print_r($_POST);
-            //sucesso
+            $usuario = Container::getModel("usuario");
+            $usuario->__set("nome",$_POST['nome']);
+            $usuario->__set("email",$_POST['email']);
+            $usuario->__set("senha",$_POST['senha']);
+
+            //validacao
+            if ($usuario->validar()) {
+                $usuario->salvar();
+                $this->render('inscreverse');
+            }
+
+    
+          // $this->render('inscreverse');  
             
 
 
