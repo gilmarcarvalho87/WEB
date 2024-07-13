@@ -14,7 +14,13 @@ class  IndexController extends Action{
         public function index(){        
             $this->render('index');
         }
-        public function inscreverse(){        
+        public function inscreverse(){       
+            $this->view->usuario= array(
+                "nome" =>"",
+                "email" =>"",
+                "senha" =>"",
+            );
+            $this->view->erroCadastro = false; 
             $this->render('inscreverse');
         }
         public function registrar(){        
@@ -24,18 +30,30 @@ class  IndexController extends Action{
             $usuario->__set("email",$_POST['email']);
             $usuario->__set("senha",$_POST['senha']);
 
-            //validacao
-            if ($usuario->validar()) {
-                $usuario->salvar();
-                $this->render('inscreverse');
-            }
-
-    
-          // $this->render('inscreverse');  
             
+            //validar
+            if ($usuario->validar() && count($usuario->getUsuarioPorEmail()) == 0  ) {                                                  
+                    $usuario->salvar();
 
-
-            //erro
+                    $this->render("cadastro");
+                }else {
+                    $this->view->erroCadastro = true;
+                    $this->view->usuario= array(
+                        "nome" =>$_POST["nome"],
+                        "email" =>$_POST["email"],
+                        "senha" =>$_POST["senha"]
+                    );
+                    $this->render("inscreverse");
+                }
+    
+                
+            }  
+           
+                         
+                
+          
+    
+         
 
 
 
@@ -44,7 +62,7 @@ class  IndexController extends Action{
        
     
 
-}
+
 
 
 ?>

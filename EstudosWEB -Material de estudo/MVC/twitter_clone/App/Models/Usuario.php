@@ -20,7 +20,7 @@ class Usuario extends Model{
     
     
     //salvar usuario
-    public function salvar(){
+    public function salvar(){         
     $query="INSERT INTO usuarios(nome,email,senha)VALUES(:nome,:email,:senha)";
     $stmt= $this->db->prepare($query);
     $stmt->bindValue(":nome",$this->__get('nome'));
@@ -29,29 +29,29 @@ class Usuario extends Model{
     $stmt->execute();
         return $this;
     }
-    //validar usuario
+    //verifica se campos foram preenchidos
     public function validar(){
         $valido=true;
 
         if (strlen($this->__get("nome")) < 3  || strlen($this->__get("email")) < 3 ||  strlen($this->__get("senha")) < 3) {
-            $valido=false;
-            echo "Faltam dados no Campo.";
-        }else{
-            echo"Inserido ";
+               $valido=false;
         }
-           
-            
-          
         return $valido;
     }
+    //verifica se ja existe no banco
+     public function getUsuarioPorEmail(){
+        $query="SELECT nome,email FROM `usuarios` WHERE  email= :email";
+        $stmt= $this->db->prepare($query);      
+        $stmt->bindValue(":email",$this->__get('email'));       
+        $stmt->execute();
+          return $stmt->fetchAll(\PDO::FETCH_ASSOC); 
+        }    
+      
     
     
     
     
-    //recuperar senha
+    
+    }
 
-}
-
-
-
-?>
+    ?>
