@@ -14,13 +14,13 @@ $api = new ApiConsumer();
 <div class="container mt-5">
     <div class="row">
         <div class="col text-center">
-            <h3>Paises do mundo</h3>
+            <h3>Países do mundo</h3>
             <hr>
         </div>
     </div>
     <div class="row justify-content-center">
         <div class="col-4 ">
-            <p class="d-flex justify-content-center">Lista de Paises</p>
+            <p class="d-flex justify-content-center">Lista de Países</p>
             <select class="form-select" name="country" id="select_country">
                 <option value="" >Selecione um país</option>
                 <?php foreach($countries as $country) : ?>
@@ -42,7 +42,7 @@ $api = new ApiConsumer();
             const select_country= document.querySelector("#select_country")
                   select_country.addEventListener('change',  ()=> {
                      const country = select_country.value
-                     console.log(country)
+                   window.location.href=`?route=country&country_name=${country} `
 
 
                   });

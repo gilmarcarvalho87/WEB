@@ -2,7 +2,8 @@
 
 return[ 
     '404',
-    'home'
+    'home',
+    'country'
 ];
 
 ?>
