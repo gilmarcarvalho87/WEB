@@ -12,9 +12,11 @@ class  IndexController extends Action{
      
 
         public function index(){        
+            
+            $this->view->login = isset($_GET['login']) ? $_GET['login'] : '';
             $this->render('index');
         }
-        public function inscreverse(){       
+        public function inscreverse(){          
             $this->view->usuario= array(
                 "nome" =>"",
                 "email" =>"",
@@ -32,19 +34,19 @@ class  IndexController extends Action{
 
             
             //validar
-            if ($usuario->validar() && count($usuario->getUsuarioPorEmail()) == 0) {                                               
-                
-                $this->render("cadastro");
-                $usuario->salvar();
-                }else {
-                    $this->view->usuario= array(
-                        "nome" =>$_POST['nome'],
-                        "email" =>$_POST['email'],
-                        "senha" =>$_POST['senha']
-                    );
-                    $this->view->erroCadastro = true;
-                    $this->render("inscreverse");
-                }
+            if ($usuario->validar() && count($usuario->getUsuarioPorEmail()) == 0) {           
+                  $this->render("cadastro");
+                  $usuario->salvar();
+            }else {
+                //mantem os dados no input  
+                $this->view->usuario= array(
+                    "nome" =>$_POST['nome'],
+                    "email" =>$_POST['email'],
+                    "senha" =>$_POST['senha']
+                );
+                $this->view->erroCadastro = true;
+                $this->render("inscreverse");
+            }
     
                 
             }  

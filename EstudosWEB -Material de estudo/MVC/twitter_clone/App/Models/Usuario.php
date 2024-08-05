@@ -21,13 +21,13 @@ class Usuario extends Model{
     
     //salvar usuario no Banco
     public function salvar(){
-    $query="INSERT INTO usuarios(nome,email,senha)VALUES(:nome,:email,:senha)";
-    $stmt= $this->db->prepare($query);
-    $stmt->bindValue(":nome",$this->__get('nome'));
-    $stmt->bindValue(":email",$this->__get('email'));
-    $stmt->bindValue(":senha",$this->__get('senha'));
-    $stmt->execute();
-    return $this;
+        $query="INSERT INTO usuarios(nome,email,senha)VALUES(:nome,:email,:senha)";
+        $stmt= $this->db->prepare($query);
+        $stmt->bindValue(":nome",$this->__get('nome'));
+        $stmt->bindValue(":email",$this->__get('email'));
+        $stmt->bindValue(":senha",$this->__get('senha'));
+        $stmt->execute();
+        return $this;
     }
     //verifica se campos foram preenchidos
     public function validar(){
@@ -53,11 +53,20 @@ class Usuario extends Model{
         $stmt->bindValue(":senha",$this->__get('senha'));
         $stmt->execute();
         $usuario= $stmt->fetch(\PDO::FETCH_ASSOC); 
-        
-        return $usuario;
+
+        if( !empty($usuario['id']) && !empty($usuario['nome'])) {           
+                $this->__set("id",$usuario["id"]);   
+                $this->__set("nome",$usuario["nome"]);                   
+        }        
+        return $this;
     }
-    
-   
+    public function getAll(){
+        $query='SELECT id,nome,email FROM usuarios WHERE nome LIKE :nome';
+        $stmt= $this->db->prepare($query);
+        $stmt->bindValue(":nome","%".$this->__get("nome")."%");
+        $stmt->execute();
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
 
     
 }
