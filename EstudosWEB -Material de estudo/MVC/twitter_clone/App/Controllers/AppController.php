@@ -46,26 +46,42 @@ class  AppController extends Action{
         }   
     }
     public function quemSeguir(){
-        $this->validaAutenticacao();
-
-
-        /// ///// ver esta parte/////
-        echo"<br/><br/>";
-        $usuarios=Array();
+        $this->validaAutenticacao();              
+        $usuarios=array();
        
-        $pesquisa=$_GET["pesquisarPor"];
-             
-            if($pesquisa != ""){
-                $usuario=Container::getModel("Usuario");
-                $usuario->set__("nome",$_GET["pesquisa"]);
-                $usuarios=$usuario->getAll();
-                print_r($usuarios);
-            }
-       // $this->view->usuarios = $usuarios;
-        
+        ///////// tem que refatorar por nao aparece os pesquisados ////// 
+        $pesquisaPor= isset($_GET['pesquisarPor'])? $_GET['pesquisarPor']:"";       
+           
+        if($pesquisaPor != ''){    
+                $usuario= Container::getModel('Usuario');
+                $usuario->set__('nome',$pesquisaPor);
+                $usuario->set__('id',$_SESSION['id']);
+                $usuarios=$usuario->getAll(); 
+        }             
+            
+        $this->view->usuarios = $usuarios;        
         $this->render('quemSeguir');
+    
     }
+    public function acao(){
+        $this->validaAutenticacao();
+        
+        //verifica se esta setado 
+        $acao= isset($_GET['acao']) ? $_GET['acao'] : ""; 
+        $id_usuario_seguindo= isset($_GET['id_usuario']) ? $_GET['id_usuario'] : ""; 
 
+        //craaimos a instancia de usuario e setamos o id 
+        $usuario = Container::getModel('Usuario');
+        $usuario->__set("id",$_SESSION['id']);
+
+        //verificamos a rota 
+        if($acao == 'seguir'){
+            $usuario->seguirUsuario($id_usuario_seguindo);   
+         } else if($acao == 'deixar_de_seguir'){
+            $usuario->deixarseguirUsuario($id_usuario_seguindo);
+         }
+         
+         
+    }         
 }
-
 ?>

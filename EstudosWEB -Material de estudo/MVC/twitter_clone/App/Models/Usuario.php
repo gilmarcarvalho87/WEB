@@ -25,10 +25,10 @@ class Usuario extends Model{
         $stmt= $this->db->prepare($query);
         $stmt->bindValue(":nome",$this->__get('nome'));
         $stmt->bindValue(":email",$this->__get('email'));
-        $stmt->bindValue(":senha",$this->__get('senha'));
+        $stmt->bindValue(":senha",MD5($this->__get('senha')));
         $stmt->execute();
         return $this;
-    }
+        }
     //verifica se campos foram preenchidos
     public function validar(){
         $valido=true;
@@ -40,17 +40,17 @@ class Usuario extends Model{
     }    
     //verifica se ja existe no banco
     public function getUsuarioPorEmail(){
-        $query="SELECT nome,email FROM `usuarios` WHERE  email= :email";
+        $query="SELECT nome,email FROM `usuarios` WHERE  email = :email";
         $stmt= $this->db->prepare($query);      
         $stmt->bindValue(":email",$this->__get('email'));       
         $stmt->execute();
           return $stmt->fetchAll(\PDO::FETCH_ASSOC); 
     }    
     public function autenticar(){
-        $query="SELECT id,nome,email FROM `usuarios` WHERE email =:email AND senha =:senha";
+        $query="SELECT id,nome,email FROM `usuarios` WHERE email = :email AND senha = :senha";
         $stmt=$this->db->prepare($query);
         $stmt->bindValue(":email",$this->__get('email'));
-        $stmt->bindValue(":senha",$this->__get('senha'));
+        $stmt->bindValue(":senha",md5($this->__get('senha')));
         $stmt->execute();
         $usuario= $stmt->fetch(\PDO::FETCH_ASSOC); 
 
@@ -61,13 +61,29 @@ class Usuario extends Model{
         return $this;
     }
     public function getAll(){
-        $query='SELECT id,nome,email FROM usuarios WHERE nome LIKE :nome';
+        $query="SELECT id,nome,email FROM usuarios WHERE nome LIKE :nome AND id != :id" ;
         $stmt= $this->db->prepare($query);
-        $stmt->bindValue(":nome","%".$this->__get("nome")."%");
+        $stmt->bindValue(":nome",'%'.$this->__get('nome').'%');
+        $stmt->bindValue(":id",$this->__get('id'));
         $stmt->execute();
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
-
+    public function deixarseguirUsuario($id_usuario_seguindo){
+        $query="DELETE FROM usuarios_seguidores WHERE id_usuario_seguindo = :id_usuario_seguindo AND id_usuario = :id_usuario" ;
+        $stmt= $this->db->prepare($query);        
+        $stmt->bindValue(":id_usuario",$this->__get('id'));
+        $stmt->bindValue(":id_usuario_seguindo",$id_usuario_seguindo);
+        $stmt->execute();
+        return true;
+    }    
+    public function seguirUsuario($id_usuario_seguindo){
+        $query="INSERT INTO usuarios_seguidores(id_usuario, id_usuario_seguindo)values(:id_usuario, :id_usuario_seguindo)" ;
+        $stmt= $this->db->prepare($query);
+        $stmt->bindValue(":id_usuario",$this->__get('id'));
+        $stmt->bindValue(":id_usuario_seguindo",$id_usuario_seguindo);
+        $stmt->execute();
+        return true;
+    }
     
 }
 
